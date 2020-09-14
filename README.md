@@ -1,6 +1,11 @@
-![Python 2.7](https://img.shields.io/badge/python-2.7-green.svg)
-![Python 3.6](https://img.shields.io/badge/python-3.6-green.svg)
 ## Dancing to Music
+
+1. fork from original repository
+2. Install required libraries (in requirements.txt)
+3. Get preprocess.py and mfcc_rev.py from Obama lip thing
+4. Change StandardError to Exception for Python3
+5. instead of --comp_snapshot, just use --resume
+
 PyTorch implementation of the cross-modality generative model that synthesizes dance from music.
 
 
@@ -61,7 +66,7 @@ python demo.py --decomp_snapshot DECOMP_SNAPSHOT --comp_snapshot COMP_SNAPSHOT -
 
 - Example
 ```
-python demo.py -decomp_snapshot snapshot/Stage1.ckpt --comp_snapshot snapshot/Stage2.ckpt --aud_path demo/demo.wav --out_file demo/out.mp4 --out_dir demo/out_frame
+python demo.py --decomp_snapshot checkpoint/Stage1.ckpt --resume checkpoint/Stage2.ckpt --aud_path tigerinside.mp3 --out_file test.mp4 --out_dir out_frame
 ```
 
 
